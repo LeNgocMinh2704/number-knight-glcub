@@ -1,50 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <!--
-Tower: https://blackspirestudio.itch.io/medieval-pixel-art-asset-free
-  -->
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Number Knight</title>
-    <link href="./favicon.png" rel="icon shortcut" />
-    <link href="./style.css" rel="stylesheet" />
+    <link href="/assets/favicon-BJqfrPdp.png" rel="icon shortcut" />
     <style id="s"></style>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" crossorigin src="/assets/index-CUyKBQAv.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BDrzqc4q.css">
   </head>
   <body data-s="title" class="relative">
     <button type="button" id="soundButton"></button>
-    <div id="myModal" class="bg-[#291B0B] backdrop-blur-[26px] rounded-3xl z-[9999] flex flex-col items-center relative">
+    <div id="myModal" class="bg-[#291B0B] backdrop-blur-[26px] rounded-3xl z-[100] flex flex-col items-center justify-center relative">
       <p class="text-center uppercase">Explore your NFT Marketplace</p>
       <p class="text-center uppercase font-bold" id="walletAddress">Explore your NFT Marketplace</p>
       
       <button onclick="closeModal()" class="fixed top-[16px] right-[16px]">Close</button>
       <button class="fixed top-[16px] right-[80px]" id="reset-character">Reset Character</button>
-      <div id="nft-container">
+      <div id="root">
 
       </div>
     </div>
-    <div class="flex items-center gap-[8px] fixed top-[16px] right-[100px] z-[1000]">
-      <button class=" bg-[rgb(62,226,180)] rounded-[12px] p-5 cursor-pointer  uppercase font-bold" id="marketplace">Marketplace</button>
+    <!-- <div id="myModal" class="bg-[#291B0B h-[700px] backdrop-blur-[26px] rounded-3xl z-[9999] flex flex-col items-center relative">
+      <p class="text-center uppercase">Unlock by MECHA Ticket</p>
+      <p class="text-center uppercase font-bold" id="walletAddress">Your Tickets</p>
+      
+      <div class="flex items-center jutify-start gap-[32px] w-[850px] h-fit overflow-x-auto ">
+        <div class="flex flex-col items-start justify-start gap-[16px] rounded-2xl w-[300px] h-[502px] p-[24px] bg-[#FFBC39] shrink-0 relative overflow-hidden">
+          <img src="./Ticker1.png"/>
+          <p class="text-[16px] leading-6 text-center w-full">0x100B...BA1E</p>
+          <button class="bg-[#E665B0] rounded-[0px_0px_16px_16px] text-[#FFF] text-[20px] font-[500] absolute bottom-0 right-0 left-0 h-[47px]">Unlock Level</button>
+        </div>
+        <div class="flex flex-col items-start justify-start gap-[16px] rounded-2xl w-[300px] h-[502px] p-[24px] bg-[#FFBC39] shrink-0 relative overflow-hidden">
+          <img src="./Ticker2.png"/>
+          <p class="text-[16px] leading-6 text-center w-full">0x100B...BA1E</p>
+          <button class="bg-[#E665B0] rounded-[0px_0px_16px_16px] text-[#FFF] text-[20px] font-[500] absolute bottom-0 right-0 left-0 h-[47px]">Unlock Level</button>
+        </div>
+        <div class="flex flex-col items-start justify-start gap-[16px] rounded-2xl w-[300px] h-[502px] p-[24px] bg-[#FFBC39] shrink-0 relative overflow-hidden">
+          <img src="./Ticker3.png"/>
+          <p class="text-[16px] leading-6 text-center w-full">0x100B...BA1E</p>
+          <button class="bg-[#E665B0] rounded-[0px_0px_16px_16px] text-[#FFF] text-[20px] font-[500] absolute bottom-0 right-0 left-0 h-[47px]">Unlock Level</button>
+        </div>
+        <div class="flex flex-col items-start justify-start gap-[16px] rounded-2xl w-[300px] h-[502px] p-[24px] bg-[#FFBC39] shrink-0 relative overflow-hidden">
+          <img src="./Ticker4.png"/>
+          <p class="text-[16px] leading-6 text-center w-full">0x100B...BA1E</p>
+          <button class="bg-[#E665B0] rounded-[0px_0px_16px_16px] text-[#FFF] text-[20px] font-[500] absolute bottom-0 right-0 left-0 h-[47px]">Unlock Level</button>
+        </div>
+        <div class="flex flex-col items-start justify-start gap-[16px] rounded-2xl w-[300px] h-[502px] p-[24px] bg-[#FFBC39] shrink-0 relative overflow-hidden">
+          <img src="./Ticker5.png"/>
+          <p class="text-[16px] leading-6 text-center w-full">0x100B...BA1E</p>
+          <button class="bg-[#E665B0] rounded-[0px_0px_16px_16px] text-[#FFF] text-[20px] font-[500] absolute bottom-0 right-0 left-0 h-[47px]">Unlock Level</button>
+        </div>
+      </div>
+
+      <button onclick="closeModal()" class="fixed top-[16px] right-[16px]">Close</button>
+      <button class="fixed top-[16px] right-[80px]" id="reset-character">Reset Character</button>
+      
+    </div> -->
     
+    <div class="flex items-center gap-[8px] fixed top-[16px] right-[100px] z-[10]">
+      <button class=" bg-[rgb(62,226,180)] rounded-[12px] p-2 cursor-pointer  uppercase font-bold" id="marketplace">Marketplace</button>
+        <button class="bg-[rgb(62,226,180)] rounded-xl"><w3m-button /></button>
     </div>
     
-    <section id="title">
-      <dialog id="titleDialog">
-        <form method="dialog">
+    <section id="title" >
+      <dialog id="titleDialog" >
+        <form method="dialog" >
           <h1 class="title">number knight</h1>
-          <button class="button hidden" id="PlayGame_sound">Play <small>with sound</small></button>
-          <button class="button hidden" value="no-sound">
+          <button class="button " id="PlayGame_sound">Play <small>with sound</small></button>
+          <button class="button " value="no-sound">
             Play <small>without sound</small>
           </button>
-          <button class="button" value="editor">
-            <small>Level editor</small>
+          <button class="button w-[300px] font-bold" value="editor">
+            <small>Unlock by MECHA Ticket</small>
           </button>
+          
         </form>
-        <button class="bg-[rgb(62,226,180)] rounded-[12px] p-5 cursor-pointer  uppercase font-bold mt-[16px]" id="connect-metamask">Connect Wallet</button>
+        
         </div>
       </dialog>
+      
     </section>
+    
     <section id="menu">
       <dialog id="menuDialog">
         <form method="dialog">
@@ -183,7 +221,7 @@ Tower: https://blackspirestudio.itch.io/medieval-pixel-art-asset-free
     </section>
 
     <section id="editor">
-      <aside style="display: block; position: fixed; z-index: 9">
+      <!-- <aside style="display: block; position: fixed; z-index: 9">
         <p><b>Build your own level!</b></p>
         <label>
           Share direct link to your level
@@ -211,7 +249,7 @@ Tower: https://blackspirestudio.itch.io/medieval-pixel-art-asset-free
             ><small>All your levels ⭷</small></a
           >
         </div>
-      </aside>
+      </aside> -->
       <div id="ce" class="tower-container">
         <div class="tower current">
           <div class="tower-floor" data-e="none">
@@ -222,10 +260,7 @@ Tower: https://blackspirestudio.itch.io/medieval-pixel-art-asset-free
         </div>
       </div>
     </section>
-
-    <script type="module" src="./index.js"></script>
-    <script type="module" src="./connectWallet.js"></script>
-    <script type="module" src="./getNFT.js"></script>
+
     <script>
       
       // Function to close the modal
@@ -243,6 +278,7 @@ Tower: https://blackspirestudio.itch.io/medieval-pixel-art-asset-free
     }
       }
       document.getElementById("reset-character").addEventListener("click", reset)
+     
     </script>
   </body>
 </html>
